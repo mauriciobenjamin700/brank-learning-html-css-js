@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componente de Botão</title>
+    <link rel="stylesheet" href="src/components/Button/global.css">
+</head>
+<body>
+    <div id="button-container"></div>
+    <div id="button-container2"></div>
+    <div id="button-container3"></div>
+    <script src="src/components/main.js"></script>
+    <script>
+        load_component('button-container', 'src/components/Button/confirm/button.html', 'src/components/Button/confirm/button.css',  'src/components/Button/confirm/button.js');
+        load_component('button-container2', 'src/components/Button/cancel/button.html', 'src/components/Button/cancel/button.css',  'src/components/Button/cancel/button.js');
+        load_component('button-container3', 'src/components/Button/normal/button.html', 'src/components/Button/normal/button.css', 'src/components/Button/normal/button.js');
+    </script>
+
+</body>
+</html>

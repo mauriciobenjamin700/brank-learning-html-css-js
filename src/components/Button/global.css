@@ -1,0 +1,13 @@
+:root {
+    --button-bg-color: #555555; /* Cor padrão */
+    --button-border: none;
+    --button-color: #000000;
+    --button-text-align: center;
+    --button-text-decoration: none;
+    --button-display: inline-block;
+    --button-font-size: 16px;
+    --button-cursor: pointer;
+    --button-border-radius: 16px;
+    --button-width: 113px;
+    --button-height: 73px;
+}

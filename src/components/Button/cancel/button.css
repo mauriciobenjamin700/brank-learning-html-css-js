@@ -1,0 +1,24 @@
+@import url('../global.css');
+
+#Button-cancel {
+    background-color: var(--button-bg-color);
+    border: var(--button-border);
+    color: var(--button-color);
+    text-align: var(--button-text-align);
+    text-decoration: var(--button-text-decoration);
+    display: var(--button-display);
+    font-size: var(--button-font-size);
+    cursor: var(--button-cursor);
+    border-radius: var(--button-border-radius);
+    width: var(--button-width);
+    height: var(--button-height);
+}
+
+/* Se precisar alterar a cor específica para este botão */
+#Button-cancel {
+    --button-bg-color: #F44336; /* Cor específica para este botão */
+}
+
+#Button-cancel:hover {
+    background-color: #D32F2F;
+}
