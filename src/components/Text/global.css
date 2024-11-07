@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&display=swap');
+
+:root {
+    --label-font-size: 20px;
+    --title-font-size: 60px;
+    --font-family: 'Inknut Antiqua', serif;
+}

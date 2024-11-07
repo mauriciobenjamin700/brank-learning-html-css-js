@@ -1,23 +1,40 @@
 // src/components/Button/confirm/loadButton.js
 // src/components/main.js
-function load_component(containerId, htmlPath, cssPath, jsPath ) {
-    // Carrega o HTML
-    fetch(htmlPath)
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById(containerId).innerHTML = data;
-
-            // Carrega o CSS
-            const link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = cssPath;
-            document.head.appendChild(link);
-
-            // Carrega o JavaScript
-            const script = document.createElement('script');
-            script.src = jsPath;
-            document.body.appendChild(script);
-        });
+function loadComponent(path, containerId) {
+    return new Promise((resolve, reject) => {
+        const basePath = `src/components/${path}`;
+        const container = document.getElementById(containerId);
+        if (!container) {
+            console.error(`Container with id "${containerId}" not found.`);
+            reject(`Container with id "${containerId}" not found.`);
+            return;
+        }
+        // Carrega o HTML
+        fetch(`${basePath}/index.html`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load HTML: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                container.innerHTML += data; // Adiciona o conteúdo ao invés de sobrescrever
+                // Carrega o CSS
+                const link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.href = `${basePath}/index.css`;
+                document.head.appendChild(link);
+                // Carrega o JavaScript
+                const script = document.createElement('script');
+                script.src = `${basePath}/index.js`;
+                script.onload = () => resolve(); // Resolve a Promise quando o script é carregado
+                document.body.appendChild(script);
+            })
+            .catch(error => {
+                console.error(`Error loading component: ${error}`);
+                reject(error);
+            });
+    });
 }
 
 /*
