@@ -1,8 +1,0 @@
-@import url("../global.css");
-
-#Text-header {
-  font-size: var(--title-font-size);
-  font-family: var(--font-family);
-  color: #000000;
-  text-align: center;
-}
