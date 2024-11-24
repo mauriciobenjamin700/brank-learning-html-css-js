@@ -9,10 +9,11 @@
 </head>
 <body>
 
-    <div class="screen">
+    <main>
+    
 
 
-        <div id="left-side" class="left-side">
+        <div class="left-side">
 
             <h1>
                 BEM VINDO AO BANK LEARNING
@@ -20,17 +21,20 @@
 
         </div>
 
-        <div id="right-side" class="right-side main-low">
+        <div class="right-side main-low">
 
             <div class="container-login">
                 
                 <h2>Login</h2>
 
-                <form action="#">
+                <form action="#" class="login-form">
                     <input type="text" id="username" name="username" placeholder="Seu e-mail aqui" required>
                     <input type="password" id="password" name="password" placeholder="Sua senha aqui" required>
-                    <button class="normal-button">Cadastre-se</button>
-                    <button class="confirm-button">Login</button>
+                    <div class="space-buttons">
+                        <button class="normal-button">Cadastre-se</button>
+                        <button class="confirm-button">Login</button>
+                    </div>
+                    
                     <a href="#" class="label-forget label">Esqueceu a senha?</a>
                 </form>
 
@@ -38,7 +42,8 @@
 
         </div>
 
-    </div>
+
+    </main>
     
 </body>
 </html>
