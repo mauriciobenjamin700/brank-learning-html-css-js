@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app/styles/global.css">
+    <link rel="stylesheet" href="/app/styles/register.css">
+    <script src="../js/navigate.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="left-container">
+
+            <h1>Cadastro</h1>
+            
+            <form action="#" method="POST" class="register-form">
+                <input type="text" name="name" placeholder="Seu nome completo aqui" required>
+                <input type="text" name="cpf_cnpj" placeholder="Seu CPF/CNPJ aqui" required>
+                <input type="email" name="email" placeholder="Seu e-mail aqui" required>
+                <input type="text" name="phone" placeholder="Seu telefone aqui" required>
+                <input type="password" name="password" placeholder="Sua senha aqui" required>
+
+                <div class="space-buttons">
+                    <button type="reset" class="cancel-button" onclick="navigateToPage('login.html')">Cancelar</button>
+                    <button type="submit" class="confirm-button" onclick="navigateToPage('home.html')">Confirmar</button>
+                    
+                </div>
+
+            </form>
+
+        </div>
+
+        <div class="right-container">
+
+            <h1 class="tittle">Cadastre-se agora e faça parte da nossa redes de parceiros</h1>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
